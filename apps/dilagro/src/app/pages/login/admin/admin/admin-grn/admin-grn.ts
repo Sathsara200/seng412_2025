@@ -13,6 +13,6 @@ export class AdminGrn {
   @Input({ required: true }) label!: string;
   @Output() update = new EventEmitter<string>();
 
-  constructor(private appService: AppService) { }
+  constructor(protected appService: AppService) { }
 }
 
