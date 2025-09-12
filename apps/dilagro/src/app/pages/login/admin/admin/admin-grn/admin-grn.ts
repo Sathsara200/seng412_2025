@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { AppService } from 'apps/dilagro/src/app/services/app/app';
 import { MatButtonModule } from '@angular/material/button';
+import { Store } from '@ngxs/store';
+import { ShowLoading } from 'apps/dilagro/src/app/state/app/app.actions';
 
 @Component({
   selector: 'app-admin-grn',
@@ -13,6 +15,10 @@ export class AdminGrn {
   @Input({ required: true }) label!: string;
   @Output() update = new EventEmitter<string>();
 
-  constructor(protected appService: AppService) { }
+    private store = inject(Store);
+  
+  toggle() {
+    this.store.dispatch(new ShowLoading(true))
+  }
 }
 

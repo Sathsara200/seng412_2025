@@ -12,5 +12,7 @@
         ".vscode": true
     },
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
+    "files.autoSave": "onWindowChange",
+    "editor.wordWrap": "on"
 }
