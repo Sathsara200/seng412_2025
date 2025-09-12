@@ -1,21 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { AppService } from './services/app/app';
 
 
 
 
 @Component({
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, MatProgressBarModule],
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
-  name = "Sathsara";
-  frameworks = ['Angular', 'React', 'Vue'];
-
-  onClick() {
-    this.name = "Tharidu"
-  }
+  constructor(protected appService: AppService) { }
 }
