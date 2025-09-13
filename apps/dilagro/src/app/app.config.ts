@@ -9,6 +9,7 @@ import { provideRouter } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { NgxsModule } from '@ngxs/store';
 import { AppState } from './state/app/app.state';
+import { provideServiceWorker } from '@angular/service-worker';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -20,5 +21,9 @@ export const appConfig: ApplicationConfig = {
         developmentMode: isDevMode(),
       })
     ),
+    provideServiceWorker('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
   ],
 };
