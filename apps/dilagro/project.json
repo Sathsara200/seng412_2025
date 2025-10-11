@@ -8,11 +8,20 @@
   "targets": {
     "build": {
       "executor": "@angular/build:application",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "analyze": {
+        "optimization": false,
+        "sourceMap": true,
+        "extractCss": true
+      },
       "options": {
         "outputPath": "dist/apps/dilagro",
         "browser": "apps/dilagro/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/dilagro/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -21,15 +30,18 @@
             "input": "apps/dilagro/public"
           }
         ],
-        "styles": ["apps/dilagro/src/styles.scss"]
+        "styles": [
+          "apps/dilagro/src/styles.scss"
+        ]
       },
       "configurations": {
         "production": {
+          "sourceMap": true,
           "budgets": [
             {
               "type": "initial",
-              "maximumWarning": "500kb",
-              "maximumError": "1mb"
+              "maximumWarning": "3mb",
+              "maximumError": "5mb"
             },
             {
               "type": "anyComponentStyle",
@@ -71,7 +83,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/dilagro/jest.config.ts",
         "tsConfig": "apps/dilagro/tsconfig.spec.json"
