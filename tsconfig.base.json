@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@seng41293-2025/model": ["my-lib/my-lib/src/index.ts"],
+      "@seng41293-2025/my-lib": ["my-lib/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
