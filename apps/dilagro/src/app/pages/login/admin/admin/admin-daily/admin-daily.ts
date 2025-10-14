@@ -3,7 +3,6 @@ import { DailyStock } from 'apps/dilagro/src/app/services/app/daily-stock';
 
 @Component({
   selector: 'app-admin-daily',
-  imports: [],
   templateUrl: './admin-daily.html',
   styleUrl: './admin-daily.scss'
 })
