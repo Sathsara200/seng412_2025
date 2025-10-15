@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateDailyStockDto } from './dto/create-daily-stock.dto';
 import { UpdateDailyStockDto } from './dto/update-daily-stock.dto';
-import { DailyStock } from './entities/daily-stock.entity';
+import { DailyStock } from './schema/daily-stock.schema';
 
 @Injectable()
 export class DailyStockService {

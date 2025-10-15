@@ -8,16 +8,33 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
+    "target": "es2021",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@seng41293-2025/model": ["my-lib/my-lib/src/index.ts"],
-      "@seng41293-2025/my-lib": ["my-lib/src/index.ts"]
-    }
+      "@SENG412_2025/model": [
+        "libs/model/src/index.ts"
+      ],
+      "@seng41293-2025/model": [
+        "my-lib/my-lib/src/index.ts"
+      ],
+      "@seng41293-2025/my-lib": [
+        "my-lib/src/index.ts"
+      ]
+    },
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
