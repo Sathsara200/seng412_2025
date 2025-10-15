@@ -1,4 +1,4 @@
 export interface IDailyStock {
-  date: Date;
-  amount: number;
+    date: Date;
+    amount: number;
 }
