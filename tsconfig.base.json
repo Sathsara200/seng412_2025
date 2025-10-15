@@ -1,4 +1,5 @@
 {
+  "extends": "../../tsconfig.base.json",
   "compileOnSave": false,
   "compilerOptions": {
     "rootDir": ".",
@@ -18,14 +19,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@SENG412_2025/model": [
+      "@model": [
         "libs/model/src/index.ts"
-      ],
-      "@seng41293-2025/model": [
-        "my-lib/my-lib/src/index.ts"
-      ],
-      "@seng41293-2025/my-lib": [
-        "my-lib/src/index.ts"
       ]
     },
     "strict": true,
@@ -36,5 +31,9 @@
   "exclude": [
     "node_modules",
     "tmp"
+  ],
+  "include": [
+    "src/**/*",
+    "libs/model/src/index.ts"
   ]
 }
